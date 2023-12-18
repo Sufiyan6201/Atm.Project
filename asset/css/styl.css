@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  height: 100vh !important;
+  background-image: url(../images/pngtree-online-banking-concept-with-the-businessman-online-banking-concept-with-businessman-picture-image_2205169.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.w-10 {
+  width: 40% !important;
+}
+.fw-px-100 {
+  font-weight: 700;
+  width: 541px;
+  margin: auto;
+  font-size: 40px !important;
+  color: #fff;
+  align-items: center;
+  background-color: rgba(0, 123, 255, 0);
+  /* border: 1px solid rgba(0, 0, 0, 0.417);
+  border-radius: 10px; */
+  backdrop-filter: blur(5px) !important;
+}
+.mt-90 {
+  margin-top: -100px;
+}
+::placeholder {
+  color: rgb(255, 255, 255);
+}
+button {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 3px 20px 3px 20px !important;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: rgb(0, 123, 255);
+}
+/* .helo{
+  font-size: 90px !important;
+  font-weight: 900 !important;
+ color: radial-gradient(to right, rgba(255, 0, 0, 0.46) , yellow);
+ font-size: 72px;
+  background: -webkit-linear-gradient(#ff0000, #f2ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+label {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(4, 40, 53);
+  padding: 5px !important;
+}
+input.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50% !important;
+}
+input {
+  font-size: 30px !important;
+  background-color: rgba(106, 240, 240, 0);
+  border-radius: 8px;
+}
+.card {
+  border-radius: 20px;
+  height: 700px !important;
+}
+.atmcard {
+  backdrop-filter: blur(15px) !important;
+  background-color: rgba(255, 0, 0, 0) !important;
+  padding: 50px;
+}
+.text-color{
+  color: white !important;
+}
+.boxshadow{
+  box-shadow: 3px 2px 30px 8px rgba(255, 255, 255, 0.341) !important;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI ATM</title>
+    <!-- Our Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="asset/css/fontawesome.min.css">
+    <link rel="stylesheet" href="asset/css/all.min.css">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/styl.css">
+</head>
+
+<body>
+    <!-- Home Page -->
+    <section class="atm_card text-center p-5" id="prev">
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
+                src="asset/images/627cc59f1b2e263b45696a8d.png"
+                style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
+        <div class="container">
+            <div class="col d-flex justify-content-center align-items-start ">
+                <div class="card atmcard text-center w-75 boxshadow" style="width: 20rem;">
+                    <div class="d-flex justify-content-center mt-90 ">
+                        <img src="asset/images/Bank-of-India-logo.png"
+                            style="mix-blend-mode: darken !important; margin-top: 50px;" class="card-img-top w-50 "
+                            alt="...">
+                    </div>
+                    <label for="">@User Name</label>
+                    <input type="text" class="text-center p-4 " id="userName" placeholder="Enter Your Name">
+                    <label for="">🔑Password</label>
+                    <input type="password" class="text-center p-4 " id="myInput" placeholder="Enter Your Name">
+                    <div class="p-4 fs-4 m-3 p-2 ">
+                        <h2 style="color: rgb(4, 40, 53);">
+                            <input type="checkbox" class="fs-6 " onclick="myFunction()">Show
+                            Password
+                        </h2>
+                        <button class=" mx-auto rounded-5 " onclick="singIn()">Sing In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Menu Page -->
+    <section class="menu_card text-center p-5" style="display: none;" id="next">
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
+                src="asset/images/627cc59f1b2e263b45696a8d.png"
+                style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
+        <div class="container">
+            <div class="col d-flex justify-content-center align-items-start ">
+                <div class="card atmcard text-center boxshadow w-75 " style="width: 20rem;">
+                    <div class="d-flex justify-content-center mt-90 ">
+                        <img src="asset/images/Bank-of-India-logo.png"
+                            style="mix-blend-mode: darken !important; margin-top: 50px;" class="card-img-top w-50 "
+                            alt="...">
+                    </div>
+                    <div class="d-flex mx-auto  text-center ">
+                        <button onclick="widrl()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
+                        <button onclick="dep()" id="dep">Deposit</button>&nbsp;&nbsp;
+                        <button onclick="balnce()" id="balnc">Balance Inquiry</button>&nbsp;&nbsp;
+                        <button onclick="exit()" id="exit">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Balance Inquery -->
+    <section class="balnc_card text-center p-5" style="display: none;" id="balnce">
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
+                src="asset/images/627cc59f1b2e263b45696a8d.png"
+                style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
+        <div class="container">
+            <div class="col d-flex justify-content-center align-items-start ">
+                <div class="card atmcard text-center boxshadow w-75 " style="width: 20rem;">
+                    <div class="d-flex justify-content-center mt-90 ">
+                        <img src="asset/images/Bank-of-India-logo.png"
+                            style="mix-blend-mode: darken !important; margin-top: 50px;" class="card-img-top w-50 "
+                            alt="...">
+                    </div>
+                    <div class="d-flex mx-auto  text-center ">
+                        <button onclick="widrl()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
+                        <button onclick="dep()" id="dep">Deposit</button>&nbsp;&nbsp;
+                        <button onclick="balnce()" id="balnc">Balance Inquiry</button>&nbsp;&nbsp;
+                        <button onclick="exit()" id="exit">Cancel</button>
+                    </div>
+                    <div class="col-6 text-center mx-auto text-color m-3   ">
+                        <table class="">
+                            <tr>
+                                <th colspan="2" class="text-center fw-bold fs-2">Account Details :</th>
+                            </tr>
+                            <tr>
+                                <td class="fs-4">Name :&emsp;</td>
+                                <td class="fs-4">Sufiyan Ansari</td>
+                            </tr>
+                            <tr>
+                                <td class="fs-4">Acc No. : &emsp;</td>
+                                <td class="fs-4">1234567891011234567
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center"><button type="submit" class="btn btn-primary"
+                                        onclick="check()">Check Balance</button></td>
+                            </tr>
+
+                        </table>
+                        <div>
+                            <h3 class="fs-1" style="display: none;" id="check">
+                                Balance : 20000
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deposit -->
+    <section class="menu_card text-center p-5" style="display: none;" id="depo">
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
+                src="asset/images/627cc59f1b2e263b45696a8d.png"
+                style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
+        <div class="container">
+            <div class="col d-flex justify-content-center align-items-start ">
+                <div class="card atmcard text-center boxshadow w-75 " style="width: 20rem;">
+                    <div class="d-flex justify-content-center mt-90 ">
+                        <img src="asset/images/Bank-of-India-logo.png"
+                            style="mix-blend-mode: darken !important; margin-top: 50px;" class="card-img-top w-50 "
+                            alt="...">
+                    </div>
+                    <div class="d-flex mx-auto  text-center ">
+                        <button onclick="widrl()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
+                        <button onclick="dep()" id="dep">Deposit</button>&nbsp;&nbsp;
+                        <button onclick="balnce()" id="balnc">Balance Inquiry</button>&nbsp;&nbsp;
+                        <button onclick="exit()" id="exit">Cancel</button>
+                    </div>
+                    <form action="" method="" class="mt-5"id="myForm">
+                        <input type="hidden" name="type" value="atm">
+                        <label for="amount" class="fs-4 fw-bold">Amount : Rs.</label><br />
+                        <input required type="number" min="100" step="100" maxlength="12" name="amount"
+                        id="amount" placeholder="Enter Amount"><br /><br />
+                        <!-- <div class="gap"></div> -->
+                        <input type="text" name="otp" id="otp" placeholder="Show Balance">&nbsp;
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary fs-3">Submit</button>
+                           
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bootstrap js -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- main.js -->
+    <script src="asset/js/main.js"></script>
+</body>
+
+</html>
