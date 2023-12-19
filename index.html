@@ -37,16 +37,18 @@
                 style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
         <div class="container">
             <div class="col d-flex justify-content-center align-items-start ">
-                <div class="card atmcard text-center w-75 boxshadow" style="width: 20rem;">
+                <div class="card atmcard text-center hello w-75 boxshadow" style="width: 20rem;">
                     <div class="d-flex justify-content-center mt-90 ">
                         <img src="asset/images/Bank-of-India-logo.png"
                             style="mix-blend-mode: darken !important; margin-top: 50px;" class="card-img-top w-50 "
                             alt="...">
                     </div>
                     <label for="">@User Name</label>
-                    <input type="text" class="text-center p-4 " id="userName" placeholder="Enter Your Name">
+                    <input type="text" class="text-center p-4 " value="Sufiyan" id="userName"
+                        placeholder="Enter Your Name">
                     <label for="">🔑Password</label>
-                    <input type="password" class="text-center p-4 " id="myInput" placeholder="Enter Your Name">
+                    <input type="password" class="text-center p-4 " value="123456" id="myInput"
+                        placeholder="Enter Your Name">
                     <div class="p-4 fs-4 m-3 p-2 ">
                         <h2 style="color: rgb(4, 40, 53);">
                             <input type="checkbox" class="fs-6 " onclick="myFunction()">Show
@@ -60,7 +62,7 @@
         </div>
     </section>
     <!-- Menu Page -->
-    <section class="menu_card text-center p-5" style="display: none;" id="next">
+    <!-- <section class="menu_card text-center p-5" style="display: none;" id="next">
         <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
                 src="asset/images/627cc59f1b2e263b45696a8d.png"
                 style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
@@ -73,7 +75,7 @@
                             alt="...">
                     </div>
                     <div class="d-flex mx-auto  text-center ">
-                        <button onclick="widrl()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
+                        <button onclick="widrle()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
                         <button onclick="dep()" id="dep">Deposit</button>&nbsp;&nbsp;
                         <button onclick="balnce()" id="balnc">Balance Inquiry</button>&nbsp;&nbsp;
                         <button onclick="exit()" id="exit">Cancel</button>
@@ -81,9 +83,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Balance Inquery -->
-    <section class="balnc_card text-center p-5" style="display: none;" id="balnce">
+    <section class="balnc_card text-center p-5" style="display: none;" id="next">
         <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
                 src="asset/images/627cc59f1b2e263b45696a8d.png"
                 style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
@@ -96,12 +98,12 @@
                             alt="...">
                     </div>
                     <div class="d-flex mx-auto  text-center ">
-                        <button onclick="widrl()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
+                        <button onclick="widrle()" id="widrle">Withdrawal</button>&nbsp;&nbsp;
                         <button onclick="dep()" id="dep">Deposit</button>&nbsp;&nbsp;
                         <button onclick="balnce()" id="balnc">Balance Inquiry</button>&nbsp;&nbsp;
                         <button onclick="exit()" id="exit">Cancel</button>
                     </div>
-                    <div class="col-6 text-center mx-auto text-color m-3   ">
+                    <div class="col-lg-6 text-center mx-auto text-color m-3" style="display: none;" id="balnce">
                         <table class="">
                             <tr>
                                 <th colspan="2" class="text-center fw-bold fs-2">Account Details :</th>
@@ -122,10 +124,35 @@
 
                         </table>
                         <div>
-                            <h3 class="fs-1" style="display: none;" id="check">
-                                Balance : 20000
+                            <h3 class="fs-1 mt-5 " style="color: rgb(4, 40, 53);"  id="check">
+                                
                             </h3>
                         </div>
+                    </div>
+                    <div id="depo" style="display: none;">
+                        <form action="" method="" class="mt-5">
+                            <label for="amount" class="fs-4 fw-bold">Amount : Rs.</label><br />
+                            <input required type="number" min="100" step="100" maxlength="12" name="amount" id="amount"
+                                placeholder="Enter Amount"><br /><br />
+                            <input type="text" id="show" readonly placeholder="Balance">&nbsp;
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary fs-3" onclick="add()"
+                                    id="deposit">Deposit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="widrl" style="display: none;">
+                        <form action="" method="" class="mt-5">
+                            <input type="hidden" name="type" value="atm">
+                            <label for="amount" class="fs-4 fw-bold">Amount : Rs.</label><br />
+                            <input required type="number" min="100" step="100" maxlength="12" name="amount" id="amount1"
+                                placeholder="Enter Amount"><br /><br />
+                            <input type="text" id="show1" readonly placeholder="Balance">&nbsp;
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary fs-3" onclick="sub()"
+                                    id="deposit">Withdrawal</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -133,7 +160,7 @@
     </section>
 
     <!-- Deposit -->
-    <section class="menu_card text-center p-5" style="display: none;" id="depo">
+    <!-- <section class="menu_card text-center p-5" style="display: none;" id="depo">
         <h1 data-aos="fade-up" data-aos-duration="1000" class="fw-px-100 align-items-center ">BOI <img
                 src="asset/images/627cc59f1b2e263b45696a8d.png"
                 style="mix-blend-mode: darken !important; z-index: 99 !important;" class="w-25 z-3"> ATM</h1>
@@ -146,27 +173,28 @@
                             alt="...">
                     </div>
                     <div class="d-flex mx-auto  text-center ">
-                        <button onclick="widrl()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
+                        <button onclick="widrle()" id="widrl">Withdrawal</button>&nbsp;&nbsp;
                         <button onclick="dep()" id="dep">Deposit</button>&nbsp;&nbsp;
                         <button onclick="balnce()" id="balnc">Balance Inquiry</button>&nbsp;&nbsp;
                         <button onclick="exit()" id="exit">Cancel</button>
                     </div>
-                    <form action="" method="" class="mt-5"id="myForm">
+                    <form action="" method="" class="mt-5" id="myForm">
                         <input type="hidden" name="type" value="atm">
                         <label for="amount" class="fs-4 fw-bold">Amount : Rs.</label><br />
-                        <input required type="number" min="100" step="100" maxlength="12" name="amount"
-                        id="amount" placeholder="Enter Amount"><br /><br />
-                        <!-- <div class="gap"></div> -->
-                        <input type="text" name="otp" id="otp" placeholder="Show Balance">&nbsp;
+                        <input required type="number" min="100" step="100" maxlength="12" name="amount" id="amount"
+                            placeholder="Enter Amount"><br /><br />
+                        <input type="text" id="show" readonly placeholder="Balance">&nbsp;
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary fs-3">Submit</button>
-                           
+                            <button type="button" class="btn btn-primary fs-3" onclick="add()" id="deposit">Deposit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- widral -->
+
     <!-- bootstrap js -->
     <script src="asset/js/bootstrap.bundle.min.js"></script>
     <!-- jquery -->
