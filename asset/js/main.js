@@ -18,7 +18,7 @@ function singIn() {
     document.getElementById('prev').style.display = 'none'
     document.getElementById('next').style.display = 'block'
   } else {
-    alert('Wrong Username or Password, Please try again')
+    document.getElementById("lable").innerHTML = "Wrong Username or Password, Please try again";
   }
 }
 // inquery
@@ -44,9 +44,10 @@ function sub() {
   if (amount1 < blance && amount1 > 0) {
     blance -= parseInt(amount1)
     document.getElementById('show1').value = blance
-    alert('Withdrawal Succesfully Thank You For Using Our ATM')
+    document.getElementById("error").innerHTML = "Withdrawal Succesfully Thank You For Using Our ATM"
   } else {
-    alert('Pleas enter Valid Amount...')
+    document.getElementById("error").innerHTML = "Please Enter  Amount";
+
   }
 }
 // deposit
@@ -63,9 +64,9 @@ function add() {
   if (amount > 0) {
     blance += parseInt(amount)
     document.getElementById('show').value = blance;
-    alert('Deposit Succesfully Thank You For Using Our ATM')
+    document.getElementById("lable").innerHTML = "Deposit Succesfully Thank You For Using Our ATM";
   } else {
-    alert('please enter valide amount')
+    document.getElementById("lable").innerHTML = "Please Enter Valide Amount";
   }
 }
 var blance = 20000
@@ -76,13 +77,10 @@ var blance = 20000
 
 // exit
 function exit() {
-  document.getElementById('next').style.display = 'none'
-  document.getElementById('balnce').style.display = 'none'
-  document.getElementById('prev').style.display = 'block'
-  document.getElementById('check').style.display = 'none'
+  window.location = 'index.html';
 }
 
 function check() {
-  document.getElementById('check').innerHTML = '<span style="color:white;" >your balance:</span>&nbsp;&nbsp' + blance
+  document.getElementById('check').innerHTML = '<span style="color:rgb(4, 40, 53);;" >Your Balance:</span>&nbsp;&nbsp' + blance
   return
 }
